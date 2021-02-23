@@ -10,9 +10,9 @@ class ListTemplate {
     const p2 = document.createElement('p');
     const p3 = document.createElement('p');
 
-    p.textContent = `${item.format()[0]} + ${item.format()[1]}`;
-    p2.textContent = item.format()[2];
-    p3.textContent = item.format()[3];
+    p.textContent = `${item.sortedChords[0]} + ${item.sortedChords[1]}`;
+    p2.textContent = item.times;
+    p3.textContent = item.date;
 
     li.append(p);
     li.append(p2);
@@ -33,11 +33,9 @@ class ListTemplate {
       const p2 = document.createElement('p');
       const p3 = document.createElement('p');
 
-      p.textContent = `${renderRecord.format()[0]} + ${
-        renderRecord.format()[1]
-      }`;
-      p2.textContent = renderRecord.format()[2];
-      p3.textContent = renderRecord.format()[3];
+      p.textContent = `${renderRecord.sortedChords[0]} + ${renderRecord.sortedChords[1]}`;
+      p2.textContent = renderRecord.times;
+      p3.textContent = renderRecord.date;
 
       li.append(p);
       li.append(p2);
