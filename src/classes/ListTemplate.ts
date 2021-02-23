@@ -27,6 +27,7 @@ class ListTemplate {
         record.times,
         record.date
       );
+
       const li = document.createElement('li');
       const p = document.createElement('p');
       const p2 = document.createElement('p');
