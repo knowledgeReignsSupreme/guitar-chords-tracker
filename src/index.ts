@@ -51,7 +51,7 @@ form.addEventListener('submit', (e: Event) => {
   }
 });
 
-const timer = new Timer(2, countdownParagraph);
+const timer = new Timer(60, countdownParagraph);
 startButton.addEventListener('click', () => {
   timer.start();
 });

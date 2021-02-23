@@ -28,7 +28,7 @@ form.addEventListener('submit', function (e) {
         form.reset();
     }
 });
-var timer = new Timer(2, countdownParagraph);
+var timer = new Timer(60, countdownParagraph);
 startButton.addEventListener('click', function () {
     timer.start();
 });
