@@ -19,14 +19,14 @@ class Store {
   }
 
   isNewRecord(chordA: string, chordB: string, changes: string): boolean {
-    const isAlreadyExist = this.getAllRecords().filter(
+    const doesRecordExist = this.getAllRecords().filter(
       (rec) =>
         rec.sortedChords.includes(chordA) && rec.sortedChords.includes(chordB)
     );
 
-    if (!isAlreadyExist[0]) {
+    if (!doesRecordExist[0]) {
       return true;
-    } else if (changes > isAlreadyExist[0].times) {
+    } else if (changes > doesRecordExist[0].times) {
       return true;
     }
 

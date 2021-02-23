@@ -1,0 +1,130 @@
+input {
+  max-height: 3rem;
+  max-width: 5rem; }
+
+.button {
+  padding: .3rem .6rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid black; }
+  .button:hover {
+    opacity: .6; }
+  .button__red {
+    background: red;
+    color: white; }
+  .button__blue {
+    background: blue;
+    color: white; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 50rem;
+  max-width: 90%;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif; }
+  body::after {
+    content: '';
+    background: url("https://play-guitars.com/wp-content/uploads/2019/06/which-is-the-easiest-guitar-to-learn-for-beginners.jpg") no-repeat center center/cover;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    min-height: 15rem;
+    box-shadow: 0 7px 2px rgba(0, 0, 0, 0.3);
+    height: 100%; }
+  @media (max-width: 600px) {
+    body {
+      max-width: 90%; } }
+  body img {
+    max-width: 100%; }
+
+.heading__header {
+  text-align: center; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  border: 1px solid black; }
+  .form__selects {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem; }
+    .form__selects select {
+      cursor: pointer; }
+    @media (max-width: 600px) {
+      .form__selects {
+        text-align: center; }
+        .form__selects select {
+          margin-top: .5rem; } }
+  .form__button {
+    width: max-content;
+    align-self: center; }
+  .form__field__input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 1rem; }
+
+.timer__count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 1px solid black; }
+  .timer__count__paragraph {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem; }
+
+.timer__buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 1rem; }
+  .timer__buttons button + button {
+    margin-left: .5rem; }
+
+.records {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 1rem; }
+  .records__list {
+    list-style: none; }
+    .records__list__header {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem; }
+    .records__list li {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+      margin-bottom: 1rem; }
+      .records__list li p {
+        white-space: nowrap; }
+        .records__list li p:nth-of-type(1) {
+          width: 15%; }
+    .records__list__labels {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+      margin-bottom: 1rem; }
+      .records__list__labels p {
+        white-space: nowrap; }

@@ -1,0 +1,163 @@
+@import './reset.scss';
+@import './util.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 50rem;
+  max-width: 90%;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+
+  &::after {
+    content: '';
+    background: url('https://play-guitars.com/wp-content/uploads/2019/06/which-is-the-easiest-guitar-to-learn-for-beginners.jpg') no-repeat center center/cover;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    min-height: 15rem;
+    box-shadow: 0 7px 2px rgba(0, 0, 0, 0.3);
+    height: 100%;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 90%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.heading {
+  &__header {
+    text-align: center;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  border: 1px solid black;
+
+  &__selects {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+
+    select {
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      text-align: center;
+
+      select {
+        margin-top: .5rem;
+      }
+    }
+  }
+
+
+  &__button {
+    width: max-content;
+    align-self: center;
+  }
+
+  &__field {
+    &__input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-weight: bold;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+.timer {
+  &__count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+
+    &__paragraph {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1rem;
+
+    button+button {
+      margin-left: .5rem;
+    }
+  }
+}
+
+.records {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 1rem;
+
+  &__list {
+    list-style: none;
+
+    &__header {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+      margin-bottom: 1rem;
+
+      p {
+        white-space: nowrap;
+
+        &:nth-of-type(1) {
+          width: 15%;
+        }
+      }
+    }
+
+    &__labels {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+      margin-bottom: 1rem;
+
+      p {
+        white-space: nowrap;
+      }
+    }
+  }
+}

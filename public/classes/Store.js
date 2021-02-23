@@ -14,13 +14,13 @@ var Store = /** @class */ (function () {
         return recordsArray;
     };
     Store.prototype.isNewRecord = function (chordA, chordB, changes) {
-        var isAlreadyExist = this.getAllRecords().filter(function (rec) {
+        var doesRecordExist = this.getAllRecords().filter(function (rec) {
             return rec.sortedChords.includes(chordA) && rec.sortedChords.includes(chordB);
         });
-        if (!isAlreadyExist[0]) {
+        if (!doesRecordExist[0]) {
             return true;
         }
-        else if (changes > isAlreadyExist[0].times) {
+        else if (changes > doesRecordExist[0].times) {
             return true;
         }
         return false;

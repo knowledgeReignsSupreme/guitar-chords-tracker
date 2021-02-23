@@ -5,54 +5,78 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/public/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/public/styles/style.css">
   <title>Chord Tracker</title>
 </head>
 
 <body>
-  <h1>Track you guitar chords progression!</h1>
-
-  <div class="form">
-    <form id="newRecordForm">
-      <div class="field">
-        <select value="chord" id="chordASelection">
-          <option name="A">A</option>
-          <option name="D">D</option>
-          <option name="E">E</option>
-          <option name="AM">AM</option>
-          <option name="DM">DM</option>
-          <option name="EM">EM</option>
-          <option name="G">G</option>
-          <option name="C">C</option>
-          <option name="F">F</option>
-
-        </select>
-      </div>
-      <div class="field">
-        <select value="chord" id="chordBSelection">
-          <option name="A">A</option>
-          <option name="D">D</option>
-          <option name="E">E</option>
-          <option name="AM">AM</option>
-          <option name="DM">DM</option>
-          <option name="EM">EM</option>
-          <option name="G">G</option>
-          <option name="C">C</option>
-          <option name="F">F</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <input type="number" id="chordChanges" min="0" max="60">
-      </div>
+  <div class="heading">
+    <h1 class="heading__header">Track you guitar chords progression!</h1>
   </div>
-  <button type="submit" id="newRecordButton">Set new number</button>
-  </form>
+
+  <div class="form__wrapper">
+    <form id="newRecordForm" class="form__wrapper__form form">
+      <div class="form__selects">
+        <div class="form__field">
+          <label for="chordASelection">Chord 1:</label>
+          <select value="chord" id="chordASelection">
+            <option value="" disabled>First chord</option>
+            <option name="A">A</option>
+            <option name="D">D</option>
+            <option name="E">E</option>
+            <option name="AM">AM</option>
+            <option name="DM">DM</option>
+            <option name="EM">EM</option>
+            <option name="G">G</option>
+            <option name="C">C</option>
+            <option name="F">F</option>
+          </select>
+        </div>
+        <div class="form__field">
+          <label for="chordBSelection">Chord 2:</label>
+          <select value="chord" id="chordBSelection">
+            <option value="" disabled>Second chord</option>
+            <option name="A">A</option>
+            <option name="D">D</option>
+            <option name="E">E</option>
+            <option name="AM">AM</option>
+            <option name="DM">DM</option>
+            <option name="EM">EM</option>
+            <option name="G">G</option>
+            <option name="C">C</option>
+            <option name="F">F</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form__field__input">
+        <label class="form__field__input" for="chordChanges">Time changed:</label>
+        <input type="number" class="form__field__input" id="chordChanges" min="1" max="60">
+      </div>
+
+      <button type="submit" class="form__button button button__red" id="newRecordButton">Set record</button>
+    </form>
+  </div>
   <div class="timer">
-    <p class="timer__count"></p>
+    <div class="timer__count">
+      <p class="timer__count__paragraph">Timer</p>
+    </div>
+    <div class="timer__buttons">
+      <button class="timer__buttons__button button button__blue" id="startCountdown">Start</button>
+      <button class="timer__buttons__button button button__red" id="resetCountdown">Reset</button>
+    </div>
   </div>
   <div class="records">
-    <ul class="records__list"></ul>
+    <ul class="records__list">
+      <div class="records__list__header">Records</div>
+      <div class="records__list__labels">
+        <p>Chords</p>
+        <p>Changes</p>
+        <p>Date</p>
+      </div>
+    </ul>
   </div>
 
   <script src="index.js" type="module"></script>

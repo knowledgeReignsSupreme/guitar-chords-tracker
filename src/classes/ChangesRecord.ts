@@ -1,6 +1,6 @@
 import Record from '../interfaces/Record.js';
 
-class ChangesRecord {
+class ChangesRecord implements Record {
   sortedChords: string[];
   date: string;
   times: string;
@@ -11,8 +11,8 @@ class ChangesRecord {
     this.date = d;
   }
 
-  format(): string {
-    return `${this.sortedChords[0]} + ${this.sortedChords[1]} for ${this.times} on ${this.date}`;
+  format(): string[] {
+    return [...this.sortedChords, this.times, this.date];
   }
 }
 

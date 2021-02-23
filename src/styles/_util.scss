@@ -1,0 +1,20 @@
+.button {
+  padding: .3rem .6rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid black;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &__red {
+    background: red;
+    color: white;
+  }
+
+  &__blue {
+    background: blue;
+    color: white;
+  }
+}
