@@ -27,8 +27,9 @@ const resetButton = timerWrapper.querySelector(
 const recordsList = new ListTemplate(list);
 const storage = new Store(localStorage);
 
-recordsList.renderStoredRecords(storage.getAllRecords());
-
+if (storage.getAllRecords().length > 0) {
+  recordsList.renderStoredRecords(storage.getAllRecords());
+}
 form.addEventListener('submit', (e: Event) => {
   e.preventDefault();
 

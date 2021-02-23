@@ -13,7 +13,9 @@ var startButton = timerWrapper.querySelector('#startCountdown');
 var resetButton = timerWrapper.querySelector('#resetCountdown');
 var recordsList = new ListTemplate(list);
 var storage = new Store(localStorage);
-recordsList.renderStoredRecords(storage.getAllRecords());
+if (storage.getAllRecords().length > 0) {
+    recordsList.renderStoredRecords(storage.getAllRecords());
+}
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     var date = new Date();
