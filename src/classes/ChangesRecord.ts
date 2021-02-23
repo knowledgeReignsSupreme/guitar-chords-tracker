@@ -12,7 +12,13 @@ class ChangesRecord implements Record {
   }
 
   format(): string[] {
-    return [...this.sortedChords, this.times, this.date];
+    const buildFormat = [];
+    buildFormat[0] = this.sortedChords[0];
+    buildFormat[1] = this.sortedChords[1];
+    buildFormat[2] = this.times;
+    buildFormat[3] = this.date;
+
+    return buildFormat;
   }
 }
 
